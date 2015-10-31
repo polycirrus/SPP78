@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel.Syndication;
 
-namespace RssReader
+namespace CommonTypes
 {
-    public class FeedItem
+    [Serializable]
+    public struct FeedItem
     {
         public string Source { get; private set; }
         public string Title { get; private set; }

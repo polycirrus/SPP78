@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E3831CEA-DF8A-4A91-9170-B676D3AAC04F}</ProjectGuid>
+    <ProjectGuid>{F7BC26A9-62D1-4732-A3CA-4B44722532BC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FeedExtension</RootNamespace>
-    <AssemblyName>FeedExtension</AssemblyName>
+    <RootNamespace>FeedItem</RootNamespace>
+    <AssemblyName>FeedItem</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,8 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,31 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeedExtension.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FeedExtension.Designer.cs">
-      <DependentUpon>FeedExtension.cs</DependentUpon>
-    </Compile>
+    <Compile Include="FeedItem.cs" />
+    <Compile Include="FeedObjectsExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FeedItem\CommonTypes.csproj">
-      <Project>{f7bc26a9-62d1-4732-a3ca-4b44722532bc}</Project>
-      <Name>CommonTypes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RssReader\RssReader.csproj">
-      <Project>{137dc71b-653f-402b-8467-d27d8aeeeb3d}</Project>
-      <Name>RssReader</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="FeedExtension.resx">
-      <DependentUpon>FeedExtension.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
