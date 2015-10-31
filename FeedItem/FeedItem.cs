@@ -4,16 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel.Syndication;
+using System.ServiceModel;
+using System.Runtime.Serialization;
 
 namespace CommonTypes
 {
     [Serializable]
-    public struct FeedItem
+    [DataContract]
+    public class FeedItem
     {
+        [DataMember]
         public string Source { get; private set; }
+
+        [DataMember]
         public string Title { get; private set; }
+
+        [DataMember]
         public string Summary { get; private set; }
+
+        [DataMember]
         public Uri Link { get; private set; }
+
+        [DataMember]
         public DateTimeOffset PublishDate { get; private set; }
 
         public FeedItem(SyndicationItem item, string source)

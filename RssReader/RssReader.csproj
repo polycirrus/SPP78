@@ -62,6 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtensionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ExtensionTab.cs">
       <SubType>UserControl</SubType>
     </Compile>

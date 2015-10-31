@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f679347f-5a8f-4f0e-b35a-497ffb98a939" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vaio/FilterService/FilterService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FilterService.xsd" MetadataType="Schema" ID="b3e07b34-f10d-4ebd-a92d-9b42d7ea276f" SourceId="1" SourceUrl="http://vaio/FilterService/FilterService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FilterService1.xsd" MetadataType="Schema" ID="8608d512-40a9-4bc5-8fb0-d3140894071f" SourceId="1" SourceUrl="http://vaio/FilterService/FilterService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FilterService.disco" MetadataType="Disco" ID="7aacbbed-1c5b-4a95-abb4-15d30b7924a5" SourceId="1" SourceUrl="http://vaio/FilterService/FilterService.svc?disco" />
+    <MetadataFile FileName="FilterService2.xsd" MetadataType="Schema" ID="d1f141c1-34d8-4291-bfcb-077cda4236df" SourceId="1" SourceUrl="http://vaio/FilterService/FilterService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FilterService3.xsd" MetadataType="Schema" ID="31244770-f947-4ee5-baa1-e6e5777fb201" SourceId="1" SourceUrl="http://vaio/FilterService/FilterService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FilterService.wsdl" MetadataType="Wsdl" ID="5a98cf9f-8c1a-4b59-969a-6e2bdda1966a" SourceId="1" SourceUrl="http://vaio/FilterService/FilterService.svc?wsdl" />
+    <MetadataFile FileName="FilterService4.xsd" MetadataType="Schema" ID="f72a8b54-53f2-400c-b03d-d3545a8c3aad" SourceId="1" SourceUrl="http://vaio/FilterService/FilterService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

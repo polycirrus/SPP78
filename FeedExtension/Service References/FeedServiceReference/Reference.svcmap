@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4db4bb09-5b62-41be-8619-31981c5c7894" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vaio/FeedService/FeedService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FeedService.wsdl" MetadataType="Wsdl" ID="70628db5-fd6c-4a1e-b9cb-523e952ef027" SourceId="1" SourceUrl="http://vaio/FeedService/FeedService.svc?wsdl" />
+    <MetadataFile FileName="FeedService.xsd" MetadataType="Schema" ID="9d3db877-ab9f-4359-8c85-3042b8e6b28c" SourceId="1" SourceUrl="http://vaio/FeedService/FeedService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FeedService1.xsd" MetadataType="Schema" ID="7c6b80d8-f514-488b-8f2c-ec8bf30ab819" SourceId="1" SourceUrl="http://vaio/FeedService/FeedService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FeedService2.xsd" MetadataType="Schema" ID="18dbcdee-c6a3-46dc-bfa7-ae0c82e0f729" SourceId="1" SourceUrl="http://vaio/FeedService/FeedService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FeedService.disco" MetadataType="Disco" ID="0fbadf4c-8433-4465-a305-79736e7ab910" SourceId="1" SourceUrl="http://vaio/FeedService/FeedService.svc?disco" />
+    <MetadataFile FileName="FeedService3.xsd" MetadataType="Schema" ID="c2f101da-f5f3-460b-87fb-77a8d68f3e71" SourceId="1" SourceUrl="http://vaio/FeedService/FeedService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FeedService4.xsd" MetadataType="Schema" ID="b9a293e8-add4-4348-ab69-3274656af192" SourceId="1" SourceUrl="http://vaio/FeedService/FeedService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

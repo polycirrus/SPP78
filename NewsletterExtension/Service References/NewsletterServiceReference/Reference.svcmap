@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3b53f366-e4a7-4f18-a972-38f83e2f9eed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vaio/NewsletterService/NewsletterService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NewsletterService.xsd" MetadataType="Schema" ID="1a4127bb-238b-4669-9147-f175c5e8f00c" SourceId="1" SourceUrl="http://vaio/NewsletterService/NewsletterService.svc?xsd=xsd3" />
+    <MetadataFile FileName="NewsletterService.wsdl" MetadataType="Wsdl" ID="142d64f2-1fdb-4e1f-9fff-f4ea3d0c1ea7" SourceId="1" SourceUrl="http://vaio/NewsletterService/NewsletterService.svc?wsdl" />
+    <MetadataFile FileName="NewsletterService1.xsd" MetadataType="Schema" ID="c754c3bf-5529-4de7-abc0-dd277f640174" SourceId="1" SourceUrl="http://vaio/NewsletterService/NewsletterService.svc?xsd=xsd1" />
+    <MetadataFile FileName="NewsletterService.disco" MetadataType="Disco" ID="8a4bcea9-24f4-47e9-a3d5-5d96f196df17" SourceId="1" SourceUrl="http://vaio/NewsletterService/NewsletterService.svc?disco" />
+    <MetadataFile FileName="NewsletterService2.xsd" MetadataType="Schema" ID="0fc21c01-2a1c-406e-8bc0-9689ec221f14" SourceId="1" SourceUrl="http://vaio/NewsletterService/NewsletterService.svc?xsd=xsd2" />
+    <MetadataFile FileName="NewsletterService3.xsd" MetadataType="Schema" ID="8f1cd0e0-c016-40bf-8fa5-ed95b3351d1b" SourceId="1" SourceUrl="http://vaio/NewsletterService/NewsletterService.svc?xsd=xsd4" />
+    <MetadataFile FileName="NewsletterService4.xsd" MetadataType="Schema" ID="3dc9ab5b-4bff-4310-b125-c45c72535545" SourceId="1" SourceUrl="http://vaio/NewsletterService/NewsletterService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -32,6 +32,8 @@ namespace RssNewsletterService
 
         public void SendNewsItem(FeedItem item, string[] addresses)
         {
+            if (item == null)
+                throw new ArgumentNullException(nameof(item));
             if (addresses == null)
                 throw new ArgumentNullException(nameof(addresses));
             if (addresses.Length < 1)

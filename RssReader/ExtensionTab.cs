@@ -7,15 +7,18 @@ using System.Windows.Forms;
 
 namespace RssReader
 {
-    public class ExtensionTab : UserControl
+    public abstract class ExtensionTab : ExtensionControl
     {
-        public virtual void AddInlineControl(Control inlineControl)
-        {
-            throw new NotImplementedException();
-        }
+        protected String caption;
 
-        protected ExtensionTab()
+        public abstract void AddInlineControl(Control inlineControl);
+
+        protected ExtensionTab(FeedGetter feedGetter, FeedSetter feedSetter, String caption) : base(feedGetter, feedSetter)
         {
+            if (caption == null)
+                throw new ArgumentNullException(nameof(caption));
+
+            this.caption = caption;
         }
     }
 }

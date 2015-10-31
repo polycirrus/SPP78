@@ -11,11 +11,11 @@ using CommonTypes;
 
 namespace RssReader
 {
+    public delegate FeedItem[] FeedGetter();
+    public delegate void FeedSetter(FeedItem[] feed);
+
     public partial class MainForm : Form
     {
-        public delegate FeedItem[] FeedGetter();
-        public delegate void FeedSetter(FeedItem[] feed);
-
         private FeedItem[] feed;
 
         public MainForm()

@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RssReader;
 using CommonTypes;
-using FeedExtension.FeedServiceReference;
+using FilterExtension.FilterServiceReference;
 
-namespace RssFeedExtension
+namespace RssFilterExtension
 {
     [Extension(ExtensionElementPlacement.NewTab, true)]
     public partial class FeedExtension : ExtensionTab
     {
         private int inlineControlsMaxHeight, lastInlineControlRight, inlineControlMargin;
 
-        public FeedExtension(FeedGetter feedGetter, FeedSetter feedSetter) : base(feedGetter, feedSetter, "Feed")
+        public FeedExtension(FeedGetter feedGetter, FeedSetter feedSetter) : base(feedGetter, feedSetter, "Filter")
         {
             InitializeComponent();
 
@@ -64,9 +64,8 @@ namespace RssFeedExtension
         {
             try
             {
-                var feed = (new FeedServiceClient()).GetFeed();
+                var feed = (new FilterServiceClient()).FilterFeed(feedGetter());
                 feedListBox.Items.AddRange(feed.Cast<object>().ToArray());
-                feedSetter((FeedItem[])feed.Clone());
             }
             catch (Exception exc)
             {
@@ -76,7 +75,7 @@ namespace RssFeedExtension
 
         private void preferencesButton_Click(object sender, EventArgs e)
         {
-            (new SourceManagerDialog(new FeedServiceClient())).ShowDialog();
+            (new SourceManagerDialog(new FilterServiceClient())).ShowDialog();
         }
 
         private void summaryWebBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
