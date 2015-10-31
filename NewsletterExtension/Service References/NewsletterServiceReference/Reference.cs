@@ -8,3 +8,53 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+namespace NewsletterExtension.NewsletterServiceReference {
+    
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="NewsletterServiceReference.INewsletterService")]
+    public interface INewsletterService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INewsletterService/SendNewsItems", ReplyAction="http://tempuri.org/INewsletterService/SendNewsItemsResponse")]
+        void SendNewsItems(CommonTypes.FeedItem[] items, string[] addresses);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INewsletterService/SendNewsItems", ReplyAction="http://tempuri.org/INewsletterService/SendNewsItemsResponse")]
+        System.Threading.Tasks.Task SendNewsItemsAsync(CommonTypes.FeedItem[] items, string[] addresses);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface INewsletterServiceChannel : NewsletterExtension.NewsletterServiceReference.INewsletterService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class NewsletterServiceClient : System.ServiceModel.ClientBase<NewsletterExtension.NewsletterServiceReference.INewsletterService>, NewsletterExtension.NewsletterServiceReference.INewsletterService {
+        
+        public NewsletterServiceClient() {
+        }
+        
+        public NewsletterServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public NewsletterServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public NewsletterServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public NewsletterServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public void SendNewsItems(CommonTypes.FeedItem[] items, string[] addresses) {
+            base.Channel.SendNewsItems(items, addresses);
+        }
+        
+        public System.Threading.Tasks.Task SendNewsItemsAsync(CommonTypes.FeedItem[] items, string[] addresses) {
+            return base.Channel.SendNewsItemsAsync(items, addresses);
+        }
+    }
+}

@@ -1,4 +1,4 @@
-﻿namespace RssReader
+﻿namespace RssFeedExtension
 {
     partial class SourceManagerDialog
     {

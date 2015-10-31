@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\RssReader\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\RssReader\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -52,11 +52,6 @@
       <DependentUpon>FeedExtension.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\FeedServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="SourceManagerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,40 +83,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\DataSources\CommonTypes.FeedItem.datasource" />
-    <None Include="Service References\FeedServiceReference\FeedService.wsdl" />
-    <None Include="Service References\FeedServiceReference\FeedService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\FeedServiceReference\FeedService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\FeedServiceReference\FeedService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\FeedServiceReference\FeedService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\FeedServiceReference\FeedService4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\FeedServiceReference\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FeedServiceReference\FeedService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FeedServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FeedServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\FeedServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

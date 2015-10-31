@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewsletterExtension.NewsletterServiceReference;
 
-namespace NewsletterExtension
+namespace RssNewsletterExtension
 {
     public partial class AdressesDialog : Form
     {

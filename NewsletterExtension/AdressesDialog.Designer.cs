@@ -1,4 +1,4 @@
-﻿namespace NewsletterExtension
+﻿namespace RssNewsletterExtension
 {
     partial class AdressesDialog
     {

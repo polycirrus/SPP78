@@ -9,16 +9,16 @@ namespace RssReader
 {
     public abstract class ExtensionTab : ExtensionControl
     {
-        protected String caption;
-
-        public abstract void AddInlineControl(Control inlineControl);
+        public String Caption { get; protected set; }
 
         protected ExtensionTab(FeedGetter feedGetter, FeedSetter feedSetter, String caption) : base(feedGetter, feedSetter)
         {
             if (caption == null)
                 throw new ArgumentNullException(nameof(caption));
 
-            this.caption = caption;
+            this.Caption = caption;
         }
+
+        public abstract void AddInlineControl(Control inlineControl);
     }
 }

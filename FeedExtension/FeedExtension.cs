@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RssReader;
 using CommonTypes;
-using FeedExtension.FeedServiceReference;
 
 namespace RssFeedExtension
 {

@@ -11,13 +11,21 @@ namespace RssReader
     [AttributeUsage(AttributeTargets.Class)]
     public class ExtensionAttribute : Attribute
     {
-        private ExtensionElementPlacement placementType;
-        private bool supportsInline;
+
+        public ExtensionElementPlacement PlacementType
+        {
+            get;
+        }
+
+        public bool SupportsInline
+        {
+            get;
+        }
 
         public ExtensionAttribute(ExtensionElementPlacement placementType, bool supportsInline)
         {
-            this.placementType = placementType;
-            this.supportsInline = supportsInline;
+            this.PlacementType = placementType;
+            this.SupportsInline = supportsInline;
         }
     }
 }
