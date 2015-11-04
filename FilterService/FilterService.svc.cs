@@ -9,6 +9,7 @@ using CommonTypes;
 
 namespace RssFilterService
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class FilterService : IFilterService
     {
         private List<string> sources;

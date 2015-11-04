@@ -11,6 +11,7 @@ using System.Xml;
 
 namespace RssFeedService
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class FeedService : IFeedService
     {
         private List<string> sources;

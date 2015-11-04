@@ -138,9 +138,7 @@ namespace RssReader
         {
             foreach (var tab in tabExtensionsIS)
             {
-                var constructor = extension.GetConstructor(new Type[2] { typeof(FeedGetter), typeof(FeedSetter) });
-                object extensionControl = constructor.Invoke(new object[2] { new FeedGetter(GetFeed), new FeedSetter(SetFeed) });
-                tab.AddInlineControl((ExtensionControl)extensionControl);
+                tab.AddInlineControl(extension);
             }
         }
 

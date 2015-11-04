@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FilterExtension</RootNamespace>
     <AssemblyName>FilterExtension</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -79,6 +80,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\DataSources\CommonTypes.FeedItem.datasource" />
+    <None Include="Properties\DataSources\CommonTypes.FeedItem1.datasource" />
+    <None Include="Properties\DataSources\CommonTypes.FeedItem2.datasource" />
     <None Include="Service References\FilterServiceReference\FilterService.wsdl" />
     <None Include="Service References\FilterServiceReference\FilterService.xsd">
       <SubType>Designer</SubType>
@@ -97,6 +100,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FeedExtension.resx">
+      <DependentUpon>FeedExtension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceManagerDialog.resx">
+      <DependentUpon>SourceManagerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Service References\FilterServiceReference\" />
   </ItemGroup>
   <ItemGroup>
@@ -113,14 +124,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="FeedExtension.resx">
-      <DependentUpon>FeedExtension.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SourceManagerDialog.resx">
-      <DependentUpon>SourceManagerDialog.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

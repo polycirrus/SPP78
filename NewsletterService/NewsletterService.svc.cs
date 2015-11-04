@@ -11,6 +11,7 @@ using System.Net;
 
 namespace RssNewsletterService
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class NewsletterService : INewsletterService
     {
         private SmtpClient smtpClient;
@@ -22,8 +23,8 @@ namespace RssNewsletterService
 
         public NewsletterService()
         {
-            this.senderAddress = @"polycirrus@gmail.com";
-            this.password = @"sumszxdobwzycvcb";
+            this.senderAddress = @"abc@abc.com";
+            this.password = @"qwerty";
 
             smtpClient = new SmtpClient(smtpAddress, smtpPort);
             smtpClient.Credentials = new NetworkCredential(senderAddress, password);

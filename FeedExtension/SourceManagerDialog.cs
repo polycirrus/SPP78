@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FeedExtension.FeedServiceReference;
 
 namespace RssFeedExtension
 {
@@ -24,17 +25,20 @@ namespace RssFeedExtension
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            try
+            if (newSourceTextBox.Text.Length > 0)
             {
-                client.AddSource(newSourceTextBox.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                try
+                {
+                    client.AddSource(newSourceTextBox.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            newSourceTextBox.Text = "";
-            DisplaySources();
+                newSourceTextBox.Text = "";
+                DisplaySources();
+            }
         }
 
         private void DisplaySources()

@@ -27,8 +27,21 @@ namespace RssFilterExtension
             inlineControlMargin = preferencesButton.Left - refreshButton.Right;
         }
 
-        public override void AddInlineControl(Control inlineControl)
+        public override void AddInlineControl(Type inlineControlType)
         {
+            ExtensionControl inlineControl;
+            try
+            {
+                var constructor = inlineControlType.GetConstructor(new Type[2] { typeof(FeedGetter), typeof(FeedSetter) });
+                object extensionControl = constructor.Invoke(new object[2] { new FeedGetter(GetFeed), new FeedSetter(SetFeed) });
+                inlineControl = (ExtensionControl)extensionControl;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Unable to load inline control " + inlineControlType.FullName + ": " + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (inlineControl.Height > inlineControlsMaxHeight)
             {
                 this.Height += inlineControl.Height - inlineControlsMaxHeight;
@@ -85,6 +98,16 @@ namespace RssFilterExtension
                 e.Cancel = true;
                 System.Diagnostics.Process.Start(e.Url.ToString());
             }
+        }
+
+        private FeedItem[] GetFeed()
+        {
+            return (new FilterServiceClient()).FilterFeed(feedGetter());
+        }
+
+        private void SetFeed(FeedItem[] feed)
+        {
+            throw new NotSupportedException();
         }
     }
 }

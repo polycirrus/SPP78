@@ -19,6 +19,6 @@ namespace RssReader
             this.Caption = caption;
         }
 
-        public abstract void AddInlineControl(Control inlineControl);
+        public abstract void AddInlineControl(Type inlineControlType);
     }
 }

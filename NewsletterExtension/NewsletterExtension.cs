@@ -23,7 +23,7 @@ namespace RssNewsletterExtension
         private void sendButton_Click(object sender, System.EventArgs e)
         {
             var dialog = new AdressesDialog();
-            dialog.Show();
+            dialog.ShowDialog();
 
             if (dialog.DialogResult == DialogResult.OK)
             {
@@ -31,7 +31,8 @@ namespace RssNewsletterExtension
                 {
                     var addresses = dialog.Addresses;
                     var client = new NewsletterServiceClient();
-                    client.SendNewsItems(feedGetter(), addresses);
+                    Task.Factory.StartNew(async () => await client.SendNewsItemsAsync(feedGetter(), addresses));
+                    //client.SendNewsItems(feedGetter(), addresses);
                 }
                 catch (Exception exc)
                 {
